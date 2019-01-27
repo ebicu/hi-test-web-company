@@ -1,12 +1,10 @@
 <template>
-    <Card></Card>
+    <bCard title="New Company"></bCard>
 </template>
 
 <script>
-import Card from './Card'
 export default {
-  name: 'NewCompanyCard',
-  components: {Card}
+  name: 'NewCompanyCard'
 }
 </script>
 

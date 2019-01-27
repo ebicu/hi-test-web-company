@@ -1,7 +1,7 @@
 <template>
     <div>
-      <TitleBar></TitleBar>
-      <div style="display: flex">
+      <TitleBar style="height: 15vh"></TitleBar>
+      <div style="display: flex; height: 85vh">
         <CardList style="flex: 1">
           <NewCompanyCard></NewCompanyCard>
           <ReportCard></ReportCard>

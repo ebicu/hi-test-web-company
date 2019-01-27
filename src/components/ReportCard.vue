@@ -1,12 +1,10 @@
 <template>
-  <Card></Card>
+  <bCard title="Report"></bCard>
 </template>
 
 <script>
-import Card from './Card'
 export default {
-  name: 'ReportCard',
-  components: {Card}
+  name: 'ReportCard'
 }
 </script>
 
