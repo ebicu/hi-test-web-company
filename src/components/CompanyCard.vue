@@ -6,8 +6,8 @@
       <b-button variant="danger" style="float: right" @click="removeCompany">Remove</b-button>
     </template>
     <template v-if="editing">
-      <b-input type="text">{{localStorage.companyList[index].name}}</b-input>
-      <b-input type="text">{{localStorage.companyList[index].address}}</b-input>
+      <b-input v-model="localStorage.companyList[index].name"  type="text"></b-input>
+      <b-input v-model="localStorage.companyList[index].address" type="text" :id="'editAddressInput' + index"></b-input>
       <b-button variant="secondary" style="float: right; margin: 0 1vw" @click="toggleEdit">Save</b-button>
     </template>
   </bCard>
@@ -16,6 +16,7 @@
 <script>
 
 export default {
+
   name: 'CompanyCard',
   props: ['company', 'index'],
   data: function () {
@@ -27,7 +28,7 @@ export default {
     removeCompany: function (index) {
       this.localStorage.companyList.splice(index, 1)
     },
-    toggleEdit: function (index) {
+    toggleEdit: function () {
       this.editing = !this.editing
     }
   }
