@@ -1,5 +1,6 @@
 <template>
-  <CardList>
+  <CardList style="width: 50vw">
+    <bCard title="Companies"></bCard>
     <CompanyCard v-for="company in companies" v-bind:key="company.id" v-bind:company="company"></CompanyCard>
   </CardList>
 </template>
@@ -14,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+bCard{
+  margin: 1vh 0;
+}
 </style>
